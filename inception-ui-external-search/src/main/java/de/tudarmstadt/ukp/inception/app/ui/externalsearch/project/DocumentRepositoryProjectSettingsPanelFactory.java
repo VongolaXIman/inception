@@ -19,6 +19,7 @@ package de.tudarmstadt.ukp.inception.app.ui.externalsearch.project;
 
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.annotation.Order;
 
 import de.tudarmstadt.ukp.clarin.webanno.model.Project;
@@ -26,6 +27,8 @@ import de.tudarmstadt.ukp.clarin.webanno.ui.core.settings.ProjectSettingsPanelFa
 import org.springframework.stereotype.Component;
 
 @Component
+@ConditionalOnProperty(prefix = "external-search", name = "enabled", havingValue = "true",
+        matchIfMissing = false)
 @Order(400)
 public class DocumentRepositoryProjectSettingsPanelFactory
     implements ProjectSettingsPanelFactory
