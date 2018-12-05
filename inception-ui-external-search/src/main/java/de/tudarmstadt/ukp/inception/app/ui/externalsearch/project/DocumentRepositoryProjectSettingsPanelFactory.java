@@ -23,7 +23,9 @@ import org.springframework.core.annotation.Order;
 
 import de.tudarmstadt.ukp.clarin.webanno.model.Project;
 import de.tudarmstadt.ukp.clarin.webanno.ui.core.settings.ProjectSettingsPanelFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 @Order(400)
 public class DocumentRepositoryProjectSettingsPanelFactory
     implements ProjectSettingsPanelFactory
