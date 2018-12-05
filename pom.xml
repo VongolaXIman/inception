@@ -789,7 +789,7 @@
           </execution>
         </executions>
         <configuration>
-          <failOnWarning>true</failOnWarning>
+          <failOnWarning>false</failOnWarning>
           <usedDependencies combine.children="append">
             <!-- 
               - Logging is used via reflection and cannot be detected by Maven
